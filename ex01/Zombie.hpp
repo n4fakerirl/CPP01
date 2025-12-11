@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/10 15:49:30 by ocviller          #+#    #+#             */
-/*   Updated: 2025/12/11 13:10:34 by ocviller         ###   ########.fr       */
+/*   Created: 2025/12/10 15:40:32 by ocviller          #+#    #+#             */
+/*   Updated: 2025/12/11 16:31:17 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#pragma once
 
-int main(void)
+#include <iostream>
+
+class Zombie
 {
-    randomChump("Oceane");
-    randomChump("Test");
-    Zombie *b = newZombie("Lea");
-    Zombie *d = newZombie("Emilie");
-    b->announce();
-    d->announce();
-    delete b;
-    delete d;
-}
+    private:
+    std::string _name;
+
+    public:
+    std::string get_name(void);
+    void set_name(std::string name);
+    void announce(void);
+    ~Zombie();
+};
+
+Zombie* newZombie(std::string name);
+Zombie randomChump(std::string name);

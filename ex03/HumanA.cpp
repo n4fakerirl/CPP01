@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/10 15:49:30 by ocviller          #+#    #+#             */
-/*   Updated: 2025/12/11 13:10:34 by ocviller         ###   ########.fr       */
+/*   Created: 2025/12/11 16:35:09 by ocviller          #+#    #+#             */
+/*   Updated: 2025/12/11 16:55:21 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
+#include "HumanA.hpp"
 
-int main(void)
+HumanA::HumanA(std::string n, Weapon w)
 {
-    randomChump("Oceane");
-    randomChump("Test");
-    Zombie *b = newZombie("Lea");
-    Zombie *d = newZombie("Emilie");
-    b->announce();
-    d->announce();
-    delete b;
-    delete d;
+    this->name = n;
+    std::string tmp = w.getType();
+    A.setType(tmp);
 }

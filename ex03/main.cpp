@@ -5,21 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/10 15:49:30 by ocviller          #+#    #+#             */
-/*   Updated: 2025/12/11 13:10:34 by ocviller         ###   ########.fr       */
+/*   Created: 2025/12/11 15:25:25 by ocviller          #+#    #+#             */
+/*   Updated: 2025/12/11 16:49:50 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
+#include "HumanA.hpp"
 
 int main(void)
 {
-    randomChump("Oceane");
-    randomChump("Test");
-    Zombie *b = newZombie("Lea");
-    Zombie *d = newZombie("Emilie");
-    b->announce();
-    d->announce();
-    delete b;
-    delete d;
+    Weapon club = Weapon("crude spiked club");
+    //std::cout << club.getType() << std::endl;
+    HumanA bob("BOB", club);
+    bob.attack();
+    // club.setType("some other type of club");
+    // bob.attack()
 }

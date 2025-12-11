@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/10 15:49:30 by ocviller          #+#    #+#             */
-/*   Updated: 2025/12/11 13:10:34 by ocviller         ###   ########.fr       */
+/*   Created: 2025/12/11 15:21:19 by ocviller          #+#    #+#             */
+/*   Updated: 2025/12/11 16:38:11 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#pragma once
+#include <iostream>
 
-int main(void)
+class Weapon
 {
-    randomChump("Oceane");
-    randomChump("Test");
-    Zombie *b = newZombie("Lea");
-    Zombie *d = newZombie("Emilie");
-    b->announce();
-    d->announce();
-    delete b;
-    delete d;
-}
+    private:
+    std::string type;
+
+    public:
+    std::string getType(void);
+    Weapon(std::string str);
+    void setType(std::string name);
+};
+
+class HumanB
+{
+    Weapon B;
+    std::string name;
+    void attack(void)
+    {
+        std::cout << this->name << " attacks with their " << this->B.getType() << std::endl;
+    }
+};

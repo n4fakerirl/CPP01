@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 15:40:32 by ocviller          #+#    #+#             */
-/*   Updated: 2025/12/11 11:13:17 by ocviller         ###   ########.fr       */
+/*   Updated: 2025/12/11 16:18:21 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,7 @@ class Zombie
     std::string get_name(void);
     void set_name(std::string name);
     void announce(void);
-    void destructor();
-    
+    ~Zombie();
 };
 
 Zombie* newZombie(std::string name);

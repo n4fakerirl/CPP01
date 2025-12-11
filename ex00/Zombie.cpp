@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 11:03:19 by ocviller          #+#    #+#             */
-/*   Updated: 2025/12/11 11:10:03 by ocviller         ###   ########.fr       */
+/*   Updated: 2025/12/11 16:18:05 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,7 @@ void Zombie::announce(void)
     std::cout << _name << ": BraiiiiiiinnnzzzZ...\n";
 }
 
-void Zombie::destructor()
+Zombie::~Zombie()
 {
-    std::cout << this->_name << ": Zombie destroyed.\n";
-    delete this;
+    std::cout << _name << " destroyed" << std::endl;
 }
