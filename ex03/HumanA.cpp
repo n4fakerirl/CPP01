@@ -6,16 +6,17 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 16:35:09 by ocviller          #+#    #+#             */
-/*   Updated: 2025/12/11 16:55:21 by ocviller         ###   ########.fr       */
+/*   Updated: 2025/12/11 17:13:45 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
 #include "HumanA.hpp"
 
-HumanA::HumanA(std::string n, Weapon w)
+void HumanA::attack(void)
 {
-    this->name = n;
-    std::string tmp = w.getType();
-    A.setType(tmp);
+    std::cout << this->name << " attacks with their " << A.getType() << std::endl;
+}
+
+HumanA::HumanA(std::string str, Weapon &n) : name(str), A(n)
+{
 }
