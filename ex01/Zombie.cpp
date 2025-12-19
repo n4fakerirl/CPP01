@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 11:03:19 by ocviller          #+#    #+#             */
-/*   Updated: 2025/12/11 16:31:30 by ocviller         ###   ########.fr       */
+/*   Updated: 2025/12/19 14:47:48 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 std::string Zombie::get_name(void)
 {
-        return (_name);
+    return (_name);
 }
 
 void Zombie::set_name(std::string name)
